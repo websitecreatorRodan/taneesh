@@ -16,7 +16,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: url('2.png') no-repeat center center fixed;
+            background: url('assets/2.png') no-repeat center center fixed;
             background-size: cover;
         }
 
@@ -208,16 +208,16 @@
 </head>
 
 <body>
-    
+
     <div class="birthday-card">
-        <img src="1 (2).jpg" alt="Birthday Celebration Image">
+        <img src="assets/1 (2).jpg" alt="Birthday Celebration Image">
         <h1>Happy Birthday Taneesh! <span class="inline-emoji" onclick="animateEmoji(this)">🎉</span></h1>
         <h2>Celebrating Your Special Day <span class="inline-emoji" onclick="animateEmoji(this)">🎂</span></h2>
         <p>Today is a wonderful day, filled with love, joy, and unforgettable moments. <span class="inline-emoji" onclick="animateEmoji(this)">💖</span></p>
         <div class="audio-player">
             <h3>Listen to a Special Birthday Song!</h3>
             <audio id="player" controls>
-                <source src="0604.mp3" type="audio/mpeg">
+                <source src="assets/0604.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
             </audio>
         </div>
@@ -244,36 +244,28 @@
             </div>
         </div>
 
-        
     </div>
 
     <div id="animation-container" class="animation-container"></div>
 
-    <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const player = new Plyr('#player', {
-                autoplay: true
-            });
-        });
-
         function animateEmoji(element) {
             element.classList.add('clicked');
             setTimeout(() => {
                 element.classList.remove('clicked');
-            }, 500);
+            }, 1000);
         }
 
         function createFloatingEmoji(emoji) {
             const animationContainer = document.getElementById('animation-container');
             const floatingEmoji = document.createElement('div');
             floatingEmoji.textContent = emoji;
-            floatingEmoji.className = 'floating-emoji';
-            floatingEmoji.style.left = `${Math.random() * 100}vw`;
+            floatingEmoji.classList.add('floating-emoji');
+            floatingEmoji.style.left = Math.random() * 100 + 'vw';
             animationContainer.appendChild(floatingEmoji);
 
             setTimeout(() => {
-                animationContainer.removeChild(floatingEmoji);
+                floatingEmoji.remove();
             }, 2000);
         }
     </script>
