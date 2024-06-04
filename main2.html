@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <title>Welcome!</title>   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Prevent scrollbars */
+            background: url('ddddd.png') no-repeat center center fixed;
+            background-size: cover; /* Automatically fit to any screen size */
+        }
+
+        .intro-wrapper {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7); /* Darker background for better contrast */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .intro-wrapper h1 {
+            color: #00FFFF; /* Aqua color for title */
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .intro-wrapper p {
+            color: #FFFFFF; /* White color for paragraph */
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .intro-wrapper a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #00FFFF; /* Aqua color for button */
+            color: #272727; /* Dark background for the text inside the button */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .intro-wrapper a:hover {
+            background-color: #00BFFF; /* Slightly darker aqua on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="intro-wrapper">
+        <h1>Welcome To Our Website!</h1>
+        <p>Volume a head</p>
+        <a href="main.html">Enter Site</a>
+    </div>
+    
+    <!-- Audio element for the sound -->
+    <audio id="beepSound" src="0604 (1).mp3"></audio>
+
+    <script>
+        // Function to play sound every second
+        function playSound() {
+            var audio = document.getElementById('beepSound');
+            audio.play();
+        }
+
+        // Play sound every 1 second (1000 milliseconds)
+        setInterval(playSound, 100);
+    </script>
+</body> 
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Taneesh!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('2.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .birthday-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+            padding: 40px 30px;
+            margin: 20px;
+        }
+
+        .birthday-card img {
+            border-radius: 10px;
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border-bottom: 5px solid #3EC1D3;
+        }
+
+        .birthday-card h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            color: #001f3f;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .birthday-card h2 {
+            font-size: 1.8em;
+            color: #001f3f;
+            margin-bottom: 20px;
+        }
+
+        .birthday-card p {
+            font-size: 1.2em;
+            color: #474747;
+            margin: 10px 0;
+        }
+
+        .highlight {
+            color: #001f3f;
+            font-weight: bold;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .footer {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-top: 30px;
+        }
+
+        .details-section {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .details-section h3 {
+            font-size: 1.5em;
+            color: #474747;
+            margin-bottom: 10px;
+        }
+
+        .details-section p {
+            font-size: 1.1em;
+            margin: 5px 0;
+        }
+
+        .photos-section {
+            margin-top: 20px;
+        }
+
+        .wishes-section {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .wishes-section h3 {
+            font-size: 1.5em;
+            color: #474747;
+            margin-bottom: 10px;
+        }
+
+        .wishes-section p {
+            font-size: 1.2em;
+            margin: 5px 0;
+        }
+
+        .celebrate-section {
+            background-color: #FFEB3B;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .celebrate-section h3 {
+            font-size: 1.8em;
+            color: #001f3f;
+            margin-bottom: 10px;
+        }
+
+        .celebrate-section p {
+            font-size: 1.2em;
+            color: #474747;
+        }
+
+        .emoji-container {
+            margin-top: 10px;
+        }
+
+        .emoji,
+        .inline-emoji {
+            font-size: 2em;
+            cursor: pointer;
+            transition: transform 0.5s, filter 0.5s;
+            display: inline-block;
+            position: relative;
+        }
+
+        .emoji.clicked,
+        .inline-emoji.clicked {
+            animation: bounce 0.5s ease;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: scale(1);
+                filter: brightness(1);
+            }
+
+            30% {
+                transform: scale(1.5);
+                filter: brightness(1.3);
+            }
+
+            100% {
+                transform: scale(1);
+                filter: brightness(1);
+            }
+        }
+
+        .animation-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .floating-emoji {
+            font-size: 2em;
+            position: absolute;
+            animation: float 2s ease-in forwards;
+            opacity: 0;
+        }
+
+        @keyframes float {
+            to {
+                transform: translateY(-100vh);
+                opacity: 1;
+            }
+        }
+
+        .quote {
+            font-style: italic;
+            margin: 20px 0;
+            color: #474747;
+        }
+
+        .audio-player {
+            margin-top: 20px;
+        }
+
+        .audio-player h3 {
+            font-size: 1.5em;
+            color: #474747;
+            margin-bottom: 10px;
+        }
+
+        .audio-player audio {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="birthday-card">
+        <img src="1 (2).jpg" alt="Birthday Celebration Image">
+        <h1>Happy Birthday Taneesh! <span class="inline-emoji" onclick="animateEmoji(this)">🎉</span></h1>
+        <h2>Celebrating Your Special Day <span class="inline-emoji" onclick="animateEmoji(this)">🎂</span></h2>
+        <p>Today is a wonderful day, filled with love, joy, and unforgettable moments. <span class="inline-emoji" onclick="animateEmoji(this)">💖</span></p>
+        <div class="audio-player">
+            <h3>Listen to a Special Birthday Song!</h3>
+            <audio id="player" controls>
+                <source src="0604.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="quote">
+            "Count your age by friends, not years. Count your life by smiles, not tears."
+        </div>
+
+        <div class="wishes-section">
+            <h3>Special Wishes <span class="inline-emoji" onclick="animateEmoji(this)">🎈</span></h3>
+            <p>Dear Taneesh, on your special day, we celebrate <strong>you</strong>! <span class="inline-emoji" onclick="animateEmoji(this)">🎁</span></p>
+            <p><span class="highlight">Creativity:</span> Your creative spirit brings ideas to life in the most amazing ways.</p>
+            <p><span class="highlight">Strength:</span> Your inner strength and resilience inspire us all to keep going, no matter what.</p>
+            <p><span class="highlight">Humor:</span> Your sense of humor brings laughter and joy, brightening every room you enter.</p>
+        </div>
+
+        <div class="celebrate-section">
+            <h3>Celebrate Together! <span class="inline-emoji" onclick="animateEmoji(this)">🎉</span></h3>
+            <p>Join us in making Taneesh's birthday unforgettable. Let's create some beautiful memories together! <span class="inline-emoji" onclick="animateEmoji(this)">🎊</span></p>
+            <div class="emoji-container">
+                <span class="emoji" onclick="createFloatingEmoji('🎊')">🎊</span>
+                <span class="emoji" onclick="createFloatingEmoji('🍰')">🍰</span>
+                <span class="emoji" onclick="createFloatingEmoji('🎈')">🎈</span>
+                <span class="emoji" onclick="createFloatingEmoji('🎁')">🎁</span>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div id="animation-container" class="animation-container"></div>
+
+    <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const player = new Plyr('#player', {
+                autoplay: true
+            });
+        });
+
+        function animateEmoji(element) {
+            element.classList.add('clicked');
+            setTimeout(() => {
+                element.classList.remove('clicked');
+            }, 500);
+        }
+
+        function createFloatingEmoji(emoji) {
+            const animationContainer = document.getElementById('animation-container');
+            const floatingEmoji = document.createElement('div');
+            floatingEmoji.textContent = emoji;
+            floatingEmoji.className = 'floating-emoji';
+            floatingEmoji.style.left = `${Math.random() * 100}vw`;
+            animationContainer.appendChild(floatingEmoji);
+
+            setTimeout(() => {
+                animationContainer.removeChild(floatingEmoji);
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>
